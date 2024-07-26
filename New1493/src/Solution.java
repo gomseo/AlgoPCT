@@ -6,7 +6,7 @@ public class Solution {
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 		// 1. 배열 생성
 		// 1행부터 ~까지 각각 열의 개수가 1부터 한개씩 늘어나는 배열
-		// p, q => 141 X 141 좌표평면 안에 존재,,(왜냐면 1<=p, q<=10000)
+		// p, q => 141 X 141 좌표평면 안에 존재,,(왜냐면 1<=(p,q)<=10000)
 		// p+q => 141+141 = 283X283 좌표평면 안에 존재,,(만약 뭐 p(141,1), q(141,1)면 p+q(282,2)니까)
 		// 근데 인덱스 0을 안쓸꺼라 284X284 좌표평면 만들어야 함
 		
