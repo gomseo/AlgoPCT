@@ -51,7 +51,12 @@ public class Solution {
 			System.out.println("OK");
 		}
 		else if(sum1==1&&sum2==1) {
-			System.out.printf("Change bit (%d,%d)",Arrays.binarySearch(rowarr, 1)+1,Arrays.binarySearch(colarr, 1)+1);
+			int x=0, y=0;
+			for(int i=0;i<rowarr.length;i++) {
+				if(rowarr[i]==1) x=i+1;
+				if(colarr[i]==1) y=i+1;
+			}
+			System.out.printf("Change bit (%d,%d)",x,y);
 		}
 		else {
 			System.out.println("Corrupt");
