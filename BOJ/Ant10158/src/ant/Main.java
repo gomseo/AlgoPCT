@@ -11,9 +11,9 @@ public class Main{
 		int w = Integer.parseInt(st.nextToken()); //첫번째 호출
 		int h = Integer.parseInt(st.nextToken());
 
-		StringTokenizer s = new StringTokenizer(bf.readLine());
-		int p = Integer.parseInt(s.nextToken()); //첫번째 호출
-		int q = Integer.parseInt(s.nextToken());
+		st = new StringTokenizer(bf.readLine());
+		int p = Integer.parseInt(st.nextToken()); //첫번째 호출
+		int q = Integer.parseInt(st.nextToken());
 		int t = bf.read();
 
         int x = (p + t)%(2 * w);    // 시간에 따른 개미의 x 변위
@@ -25,7 +25,9 @@ public class Main{
         if (y > h) {                // x 충돌과 y 충돌1은 독립적 : 별도의 if
             y = 2*h - y;
         }
-
-        System.out.println(x + " " + y);
+        
+        StringBuilder sb = new StringBuilder();
+        sb.append(x+" "+y);
+        System.out.println(sb);
     }
 }
