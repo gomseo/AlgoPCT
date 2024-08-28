@@ -1,7 +1,9 @@
 ### 이취코[이것이 취업을 위한 코딩이다] 문제 추천
 
 // 문제는 검색을 통해 찾으면 됩니다
-[문제 찾기 참고 블로그](https://velog.io/@subinmun1997/series/%EC%9D%B4%EC%BD%94%ED%85%8C)
+- 문제 찾기 참고<br>
+[문제 찾기 참고 블로그1](https://velog.io/@subinmun1997/series/%EC%9D%B4%EC%BD%94%ED%85%8C)
+[문제 찾기 참고 블로그2](https://blex.me/@mildsalmon/posts)
 
 |알고리즘|예제|문제|
 |------|---|---|
