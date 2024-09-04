@@ -6,14 +6,21 @@ public class Main {
 		
 		int N = sc.nextInt();
 		
-		long[] dp = new long[N+1];
+//		long[] dp = new long[N+1];
+//		
+//		long sum=0;
+//		for(int i=1;i<=10;i++) {
+//			sum+=Math.pow(i, N-1);
+//		}
 		
 		long sum=0;
-		for(int i=1;i<=10;i++) {
-			sum+=Math.pow(i, N-1);
+		if(N==1) {
+			System.out.println(10);
+		}else if(N>=2) {
+			sum = (long) (6*Math.pow(2, N-1)+Math.pow(2, N-2)+2+2);
 		}
 		
-		sum = sum%10007;
+		sum = (long) (sum%Math.pow(10, 9));
 		System.out.println(sum);
 		
 	}
