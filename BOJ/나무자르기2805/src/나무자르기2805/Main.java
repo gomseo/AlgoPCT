@@ -6,9 +6,9 @@ import java.util.Scanner;
 public class Main {
 	
 	static int N,M;
-	static int[] tree;
+	static long[] tree;
 	
-	static int length;
+	static long length;
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -16,28 +16,30 @@ public class Main {
 		N = sc.nextInt();
 		M = sc.nextInt();
 		
-		tree = new int[N];
+		tree = new long[N];
 		for(int i=0;i<N;i++) {
 			tree[i] = sc.nextInt();
 		}
 		Arrays.sort(tree);
-		find(0,tree[N-1],tree[N-1]/2);
+		find(0,tree[(N-1)]);
 		System.out.println(length);
 	}
 	// 이진 탐색
-	static void find(int start, int end, int mid) {
+	static void find(long start, long end) {
 		if(start<=end) {
-			length = mid;
-			int sum=0;
+			length = (start+end)/2;
+			long sum=0;
 			for(int i=0;i<N;i++) {
-				sum+=tree[i]-length;
+				if(tree[i]-length>0) {
+					sum+=tree[i]-length;					
+				}
 			}
-			if(sum<M) {
-				find(start,mid-1,(start+mid)/2);
-			}else if(sum>M){
-				find(mid+1,end,(mid+end)/2);
-			}else if(sum == M) {
+			if(sum == M) {
 				return;
+			}else if(sum<M) {
+				find(start,length-1);
+			}else if(sum>M){
+				find(length+1,end);
 			}
 		}
 	}
